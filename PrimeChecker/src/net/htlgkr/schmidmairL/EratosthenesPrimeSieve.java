@@ -9,11 +9,23 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
     public EratosthenesPrimeSieve(int up) {
         this.up = up;
         this.gestrichen = new boolean[up + 1];
-
+        sieve();
     }
 
 
+    private void sieve() {
+        for (int i = 2; i <= up; i++) {
+            gestrichen[i] = false;
+        }
 
+        for (int i = 2; i <= Math.sqrt(up); i++) {
+            if (!gestrichen[i]) {
+                for (int j = i * i; j <= up; j += i) {
+                    gestrichen[j] = true;
+                }
+            }
+        }
+    }
 
 
     @Override
