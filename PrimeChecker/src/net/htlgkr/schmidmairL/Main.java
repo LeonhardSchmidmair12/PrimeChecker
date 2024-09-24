@@ -2,7 +2,7 @@ package net.htlgkr.schmidmairL;
 
 public class Main {
     public static void main(String[] args) {
-        EratosthenesPrimeSieve eratosthenesPrimeSieve=new EratosthenesPrimeSieve(120);
+        EratosthenesPrimeSieve eratosthenesPrimeSieve=new EratosthenesPrimeSieve(11);
 
         eratosthenesPrimeSieve.printPrimes();
 
